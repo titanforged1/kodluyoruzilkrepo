@@ -1,0 +1,25 @@
+Başlangıç dizisi: [16, 21, 11, 8, 12, 22]
+
+1. Bölme
+1.[16, 21, 11] ve [8, 12, 22]
+2. Bölme
+1.1. [16] ve [21, 11]
+1.2. [8] ve [12, 22]
+
+3. Bölme
+1.2.1. [21] ve [11]
+1.2.2. [12] ve [22]
+
+1. Birleştirme
+1.[21] ve [11] birleşir -> [11, 21]
+2.[12] ve [22] birleşir -> [12, 22]
+2. Birleştirme
+1.1. [16] ve [11, 21] birleşir -> [11, 16, 21]
+2.1. [8] ve [12, 22] birleşir -> [8, 12, 22]
+
+3. Birleştirme
+1.[11, 16, 21] ve [8, 12, 22] birleşir -> [8, 11, 12, 16, 21, 22]
+Sıralanmış dizi: [8, 11, 12, 16, 21, 22]
+
+Big-O Gösterimi
+Merge Sort'un Big-O gösterimi O(n log n) şeklindedir. Hem bölme hem de birleştirme işlemleri logaritmik ve lineer zaman alır, bu nedenle karmaşıklık O(n log n) olur.
