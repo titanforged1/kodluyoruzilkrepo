@@ -1,0 +1,23 @@
+function circleArea(radius) {
+    return Math.PI * radius * radius;
+}
+
+function circleCircumference(radius) {
+    return 2 * Math.PI * radius;
+}
+
+module.exports = {
+    circleArea,
+    circleCircumference
+};
+
+
+
+const { circleArea, circleCircumference } = require('./circle');
+
+const radius = 5;
+
+console.log(`Radius: ${radius}`);
+console.log(`Area: ${circleArea(radius).toFixed(2)}`);
+console.log(`Circumference: ${circleCircumference(radius).toFixed(2)}`);
+
