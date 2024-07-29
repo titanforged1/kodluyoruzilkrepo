@@ -1,0 +1,26 @@
+const readline = require('readline');
+
+let postList = [
+    "Node.js hakkinda giriş",
+    "JavaScript ile Asenkron Programlama",
+    "RESTful API nedir?"
+];
+
+console.log("Mevcut Post Listesi:");
+postList.forEach(post => console.log("- " + post));
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+
+rl.question('Yeni bir post girin: ', (newPost) => {
+
+    postList.push(newPost);
+
+    console.log("\nGüncellenmiş Post Listesi:");
+    postList.forEach(post => console.log("- " + post));
+
+    rl.close();
+});
