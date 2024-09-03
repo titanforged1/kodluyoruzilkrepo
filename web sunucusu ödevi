@@ -1,0 +1,29 @@
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+
+    const url = req.url;
+    
+    if(url === '/'){
+        res.writeHead(200,{'content-type': 'text/html' });
+        res.write('<h2>index sayfasına hoş geldiniz</h2>');
+    } 
+    else if (url === "/hakkımda"){
+        res.writeHead(200,{'content-type': 'text/html' });
+        res.write('<h2>hakkımda sayfasına hoş geldiniz</h2>');
+    } 
+    else if (url === '/iletişim'){
+        res.writeHead(200,{'content-type': 'text/html' });
+        res.write('<h2>iletişim sayfasına hoş geldiniz</h2>');
+    } 
+    else {
+        res.writeHead(404, {'content-type': 'text/html' });
+        res.write('<h2>404 Sayfa Bulunamadı</h2>');
+    }
+
+    res.end();
+});
+
+server.listen(5000, () => {
+    console.log('Sunucu 5000 portunda çalışıyor...');
+});
